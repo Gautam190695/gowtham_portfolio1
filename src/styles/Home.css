@@ -1,0 +1,143 @@
+.hero-container {
+  background-color: transparent;
+  color: white;
+  font-family: Arial, sans-serif;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  /* pushes left + right apart */
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero-actions {
+  margin-left: auto;
+  /* pushes this group to the end */
+  display: flex;
+  gap: 12px;
+}
+
+.local-time {
+  font-size: 14px;
+}
+
+.label {
+  font-weight: bold;
+  /* color: #aaa; */
+}
+
+.menu-icon {
+  font-size: 20px;
+  letter-spacing: 5px;
+  align-self: center;
+}
+
+.contact-btn {
+  border: 0px solid white;
+  padding: 8px 16px;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.hero-main {
+  text-align: center;
+}
+
+.status {
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #ccc;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: limegreen;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.name {
+  font-size: 70px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 80px;
+  font-weight: bold;
+}
+
+.exp-btn {
+  border: 0px solid white;
+  padding: 8px 16px;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.about-btn {
+  border: 0px solid white;
+  padding: 8px 16px;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.resume-btn {
+  border: 0px solid white;
+  padding: 8px 16px;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 60%;
+  border: none;
+  background: grey;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background: grey;
+  transform: translateY(-3px);
+}

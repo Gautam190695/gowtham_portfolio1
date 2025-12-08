@@ -1,0 +1,123 @@
+.contact-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.expertise-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column; /* Mobile first */
+  align-items: center;
+  gap: 20px;
+}
+
+/* Contact Form */
+.contact-left {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.contact-left h2 {
+  margin-bottom: 10px;
+}
+
+.contact-left p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.contact-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-left input,
+.contact-left textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-left textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contact-left button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #28db72;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-left button:hover {
+  background: #28db72;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .contact-left {
+    flex: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .expertise-title {
+    font-size: 2rem;
+  }
+
+  .contact-left {
+    width: 90%;
+  }
+}
