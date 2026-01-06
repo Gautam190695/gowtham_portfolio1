@@ -20,6 +20,7 @@ export default function Expertise() {
       id="experience"
       style={{
         backgroundImage: `url(${WaterImage})`,
+      fontSize: '16px',
       }}
     >
       {/* Overlay */}

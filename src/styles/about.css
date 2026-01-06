@@ -1,257 +1,179 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+/* MAIN LAYOUT */
 .resume-page {
-  padding: 40px 20px;
-  min-width: 1000px;
-  /* background-color: rgb(129, 205, 235); */
-  object-fit: fill;
-  margin: auto;
-  font-family: Arial, sans-serif;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #e5e7eb;
 }
 
-.resume-header {
-  text-align: center;
-  margin-bottom: 40px;
+/* LEFT & RIGHT COLUMNS */
+.resume-left,
+.resume-right {
+  padding: 24px;
 }
 
+/* LEFT */
+.resume-left {
+  width: 55%;
+}
+
+/* RIGHT */
+.resume-right {
+  width: 45%;
+}
+
+.resume-card {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* HEADERS */
 .resume-header h1 {
-  font-size: 32px;
-  margin: 0;
+  font-size: 28px;
 }
 
 .resume-header h2 {
-  color: white  ;
-  margin: 5px 0;
+  font-size: 18px;
+  opacity: 0.8;
 }
 
-.tagline {
-  font-style: italic;
-  color: #555;
-}
-
+/* SECTIONS */
 .resume-section {
-  margin-bottom: 2rem;
+  margin-bottom: 24px;
 }
 
 .resume-section h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: white;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #38bdf8;
 }
 
+/* TEXT FIX (NO OVERFLOW) */
+.resume-section p,
+.resume-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* TIMELINE */
 .timeline-item {
-  border-left: 2px solid white;
-  padding-left: 15px;
-  margin-bottom: 1.5rem;
-  position: relative;
+  margin-bottom: 18px;
 }
 
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -7px;
-  top: 0px;
-  width: 12px;
-  height: 12px;
-  background: black;
-  border-radius: 50%;
+.year {
+  font-size: 13px;
+  color: #94a3b8;
 }
 
-.timeline-item .year {
-  font-size: 14px;
-  background: whitesmoke;
-  padding: 2px 8px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.skills-grid h4 {
-  margin-bottom: 10px;
-}
-
-.skills-grid ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skills-grid li {
-  /* background: whitesmoke; */
-  margin: 4px 0;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
+/* CONTACT */
 .contact-info {
   list-style: none;
   padding: 0;
+  margin-top: 12px;
 }
 
 .contact-info li {
-  margin-bottom: 6px;
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 14px;
 }
 
+/* SKILLS */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-column ul {
+  padding-left: 16px;
+}
+
+/* DOWNLOAD */
 .resume-download {
   text-align: center;
-  margin: 30px 0;
+  margin-top: 24px;
 }
 
 .btn-download {
-  background: whitesmoke;
-  color: rgb(18, 15, 15);
+  background: #38bdf8;
+  color: #000;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-download:hover {
-  background: #005f56;
-}
-
-.resume-footer {
-  text-align: center;
-  margin-top: 40px;
+  padding: 12px 20px;
+  border-radius: 6px;
   font-size: 14px;
-  color: #555;
+  cursor: pointer;
 }
 
-.footer-links a {
-  color: #00796b;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* ✨ MOBILE & TABLET RESPONSIVENESS */
-@media (max-width: 992px) {
-  .name {
-    font-size: 50px;
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .resume-page {
+    flex-direction: column;
   }
 
-  .hero-actions {
-    gap: 10px;
+  .resume-left,
+  .resume-right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .resume-card {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .resume-header h1 {
+    font-size: 22px;
+  }
+
+  .resume-header h2 {
+    font-size: 16px;
+  }
+
+  .resume-section h3 {
+    font-size: 18px;
+  }
+
+  .resume-section p,
+  .resume-section li {
+    font-size: 13px;
+  }
+
+  .contact-info li {
+    font-size: 13px;
     flex-wrap: wrap;
   }
-}
 
-@media (max-width: 768px) {
-  .hero-top {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .name {
-    font-size: 40px;
-  }
-
-  .footer-info {
-    flex-direction: column;
-    gap: 10px;
+  .btn-download {
+    width: 100%;
   }
 }
 
+/* ============== SMALL MOBILE ============== */
 @media (max-width: 480px) {
-  .hero-actions button {
-    font-size: 13px;
-    padding: 8px 10px;
+  .resume-left,
+  .resume-right {
+    padding: 16px;
   }
 
-  .name {
-    font-size: 32px;
-  }
-
-  .local-time {
-    font-size: 13px;
-  }
-
-  .footer-info span {
-    font-size: 14px;
-  }
-}
-/*  Common Android Flagship Widths (OnePlus, Samsung S-series, Vivo, Oppo) */
-@media (max-width: 430px) {
-  .name {
-    font-size: 30px;
-  }
-  .hero-actions button {
-    font-size: 12px;
-    padding: 6px 8px;
-  }
-}
-
-/*  Samsung M/A Series (360–412px width) */
-@media (max-width: 412px) {
-  .name {
-    font-size: 28px;
-  }
-  .footer-info span {
-    font-size: 13px;
-  }
-  .local-time {
-    font-size: 12px;
-  }
-}
-
-/*  OnePlus Nord, Vivo Y-Series (390px) */
-@media (max-width: 390px) {
-  .hero-actions {
-    gap: 8px;
-  }
-  .hero-actions button {
-    font-size: 11px;
-  }
-}
-
-/*  375px (most iPhones, Samsung Compact models) */
-@media (max-width: 375px) {
-  .name {
-    font-size: 26px;
-  }
-  .footer-info {
-    gap: 6px;
-  }
-}
-
-/*  360px (Samsung A12, M13, Vivo, Oppo budget phones) */
-@media (max-width: 360px) {
-  .hero-top {
-    padding: 12px;
-  }
-  .name {
-    font-size: 24px;
-  }
-  .hero-actions button {
-    padding: 5px 6px;
-    font-size: 10px;
-  }
-}
-
-/*  320px (small screens, older Samsung/Android) */
-@media (max-width: 320px) {
-  .name {
+  .resume-header h1 {
     font-size: 20px;
   }
-  .local-time {
-    font-size: 10px;
-  }
-  .footer-info span {
-    font-size: 11px;
+
+  .resume-section h3 {
+    font-size: 16px;
   }
 }
