@@ -11,10 +11,10 @@
 }
 
 .overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 0%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4); /* dark overlay */
   z-index: 1;
@@ -63,9 +63,11 @@
 }
 
 .contact-left form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .contact-left input,
@@ -88,7 +90,8 @@
   border: none;
   border-radius: 8px;
   background: #28db72;
-  color: white;
+  color: #555;
+  opacity: 200;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -104,6 +107,7 @@
   .name {
     font-size: 50px;
   }
+}
 
   .hero-actions {
     gap: 10px;
@@ -117,6 +121,24 @@
     gap: 15px;
     text-align: center;
   }
+  .footer-info {
+    gap: 6px;
+  }
+}
+
+/*  360px (Samsung A12, M13, Vivo, Oppo budget phones) */
+@media (max-width: 360px) {
+  .hero-top {
+    padding: 12px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .hero-actions button {
+    padding: 5px 6px;
+    font-size: 10px;
+  }
+}
 
   .name {
     font-size: 40px;
@@ -216,3 +238,4 @@
     font-size: 11px;
   }
 }
+

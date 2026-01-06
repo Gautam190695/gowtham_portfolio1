@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/about.css";
+import WaterImage from "../assets/seven.jpg"; 
 import { FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaDownload } from "react-icons/fa";
 
 export default function About() {
@@ -15,6 +16,10 @@ export default function About() {
     <section
       className="resume-page"
       id="about"
+      style={{
+              backgroundImage: `url(${WaterImage})`,
+            
+            }}
     >
       {/* Left Column */}
       <div className="resume-left">
@@ -135,48 +140,48 @@ export default function About() {
             </div>
           </section>
 
-          <section className="resume-section">
-            <h3>Project Experience</h3>
-            <div className="timeline-item">
-              <span className="year">2024 – 2025</span>
-              <h4>ezHour – Timesheet Management System</h4>
-              <ul>
-                <li>Developed SPA with Angular + Angular Material</li>
-                <li>Lazy loading improved performance by 30%</li>
-                <li>
-                  Integrated with .NET Core Web API for backend services
-                </li>
-                <li>
-                  Implemented timesheets, leave management, and employee
-                  management
-                </li>
-                <li>Enhanced responsive UI with real-time updates</li>
-              </ul>
-              <p>
-                <strong>Technologies:</strong> Angular, .NET Core, SQL Server,
-                Git, Jira
-              </p>
-            </div>
+            <section className="resume-section">
+              <h3>Project Experience</h3>
+              <div className="timeline-item">
+                <span className="year">2024 – 2025</span>
+                <h4>ezHour – Timesheet Management System</h4>
+                <ul>
+                  <li>Developed SPA with Angular + Angular Material</li>
+                  <li>Lazy loading improved performance by 30%</li>
+                  <li>
+                    Integrated with .NET Core Web API for backend services
+                  </li>
+                  <li>
+                    Implemented timesheets, leave management, and employee
+                    management
+                  </li>
+                  <li>Enhanced responsive UI with real-time updates</li>
+                </ul>
+                <p>
+                  <strong>Technologies:</strong> Angular, .NET Core, SQL Server,
+                  Git, Jira
+                </p>
+              </div>
 
-            <div className="timeline-item">
-              <span className="year">2024</span>
-              <h4>PMS – Project Management System</h4>
-              <p>Task creation, assignment, and team collaboration modules.</p>
-            </div>
+              <div className="timeline-item">
+                <span className="year">2024</span>
+                <h4>PMS – Project Management System</h4>
+                <p>Task creation, assignment, and team collaboration modules.</p>
+              </div>
 
-            <div className="timeline-item">
-              <span className="year">2021 – 2024</span>
-              <h4>Glamz – Salon Management Platform</h4>
-              <p>
-                Developed responsive UI with Angular improving B2B and B2C
-                engagement.
-              </p>
-              <p>
-                Developed Web API using Asp .NetCore built Backend API
-                Applications.
-              </p>
-            </div>
-          </section>
+              <div className="timeline-item">
+                <span className="year">2021 – 2024</span>
+                <h4>Glamz – Salon Management Platform</h4>
+                <p>
+                  Developed responsive UI with Angular improving B2B and B2C
+                  engagement.
+                </p>
+                <p>
+                  Developed Web API using Asp .NetCore built Backend API
+                  Applications.
+                </p>
+              </div>
+            </section>
 
           <div className="resume-download">
             <button className="btn-download" onClick={handleDownload}>

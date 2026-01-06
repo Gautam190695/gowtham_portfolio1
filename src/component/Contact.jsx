@@ -1,5 +1,5 @@
 import "../styles/contact.css";
-import WaterImage from "../assets/three.jpg";
+import WaterImage from "../assets/seven.jpg";
 
 export default function Contact() {
   return (
@@ -8,6 +8,7 @@ export default function Contact() {
       className="contact-section"
       style={{
         backgroundImage: `url(${WaterImage})`,
+        backgroundSize: "cover",
       }}
     >
       {/* Overlay for readability */}
@@ -34,10 +35,48 @@ export default function Contact() {
         </div>
 
         {/* Footer section */}
-        <footer className=" text-xl text-center pt-18  text-gray-600"
-        style={{display:"flex",flexDirection:"column",margin:"25px",fontFamily:"sans-serif",fontSize:"14px"}}>
-          © 2025 Gowtham Sivakumar. All Rights Reserved.
-        </footer>
+        <footer
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "15px 35px",
+    fontFamily: "sans-serif",
+    fontSize: "14px",
+     gap: "15px"
+  }}
+>
+  {/* Left Text */}
+  <span>© 2025 Gowtham Sivakumar. All Rights Reserved.</span>
+
+  {/* Right Icons */}
+  <div
+    style={{
+      display: "flex",
+      gap: "15px",
+      fontSize: "18px",
+      color: "#555",
+    }}
+  >
+    <a href="https://facebook.com" target="_blank" rel="noreferrer">
+      <i style={{color: "#fff"}} className="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://instagram.com" target="_blank" rel="noreferrer">
+      <i style={{color: "#fff"}} className="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+      <i style={{color: "#fff"}} className="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://github.com" target="_blank" rel="noreferrer">
+      <i style={{color: "#fff"}} className="fa-brands fa-github"></i>
+    </a>
+  </div>
+</footer>
+
       </div>
     </section>
 
