@@ -61,38 +61,121 @@
   line-height: 1.6;
 }
 
+/* ✨ MOBILE & TABLET RESPONSIVENESS */
+@media (max-width: 992px) {
+  .name {
+    font-size: 50px;
+  }
 
-/* Tablet (≤ 1024px) */
-@media (max-width: 1024px) {
-  .expertise-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px;
+  .hero-actions {
+    gap: 10px;
+    flex-wrap: wrap;
   }
 }
 
-/* Mobile (≤ 768px) */
 @media (max-width: 768px) {
-  .expertise-grid {
-    grid-template-columns: 1fr; /* 1 column */
-    gap: 25px;
-    padding: 0 5px;
+  .hero-top {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .profile-summary {
-    font-size: 15px;
-    padding: 0 16px;
+@media (max-width: 480px) {
+  .hero-actions button {
+    font-size: 13px;
+    padding: 8px 10px;
   }
-}
 
-/* Mobile */
-@media (max-width: 768px) {
-  .profile-summary {
+  .name {
+    font-size: 32px;
+  }
+
+  .local-time {
+    font-size: 13px;
+  }
+
+  .footer-info span {
     font-size: 14px;
-    padding: 0 12px;
-    text-align: left;
+  }
+}
+/*  Common Android Flagship Widths (OnePlus, Samsung S-series, Vivo, Oppo) */
+@media (max-width: 430px) {
+  .name {
+    font-size: 30px;
+  }
+  .hero-actions button {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
+
+/*  Samsung M/A Series (360–412px width) */
+@media (max-width: 412px) {
+  .name {
+    font-size: 28px;
+  }
+  .footer-info span {
+    font-size: 13px;
+  }
+  .local-time {
+    font-size: 12px;
+  }
+}
+
+/*  OnePlus Nord, Vivo Y-Series (390px) */
+@media (max-width: 390px) {
+  .hero-actions {
+    gap: 8px;
+  }
+  .hero-actions button {
+    font-size: 11px;
+  }
+}
+
+/*  375px (most iPhones, Samsung Compact models) */
+@media (max-width: 375px) {
+  .name {
+    font-size: 26px;
+  }
+  .footer-info {
+    gap: 6px;
+  }
+}
+
+/*  360px (Samsung A12, M13, Vivo, Oppo budget phones) */
+@media (max-width: 360px) {
+  .hero-top {
+    padding: 12px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .hero-actions button {
+    padding: 5px 6px;
+    font-size: 10px;
+  }
+}
+
+/*  320px (small screens, older Samsung/Android) */
+@media (max-width: 320px) {
+  .name {
+    font-size: 20px;
+  }
+  .local-time {
+    font-size: 10px;
+  }
+  .footer-info span {
+    font-size: 11px;
   }
 }
 

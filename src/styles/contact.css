@@ -107,6 +107,7 @@
   .name {
     font-size: 50px;
   }
+}
 
   .hero-actions {
     gap: 10px;
@@ -120,6 +121,24 @@
     gap: 15px;
     text-align: center;
   }
+  .footer-info {
+    gap: 6px;
+  }
+}
+
+/*  360px (Samsung A12, M13, Vivo, Oppo budget phones) */
+@media (max-width: 360px) {
+  .hero-top {
+    padding: 12px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .hero-actions button {
+    padding: 5px 6px;
+    font-size: 10px;
+  }
+}
 
   .name {
     font-size: 40px;
